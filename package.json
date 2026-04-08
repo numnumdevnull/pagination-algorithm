@@ -1,6 +1,6 @@
 {
   "name": "@numnumdevnull/pagination-algorithm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lightweight pagination algorithm with ellipsis support",
   "keywords": [
     "pagination",
