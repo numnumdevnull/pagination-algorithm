@@ -1,0 +1,49 @@
+{
+  "name": "@numnumdevnull/pagination-algorithm",
+  "version": "1.0.3",
+  "description": "Lightweight pagination algorithm with ellipsis support",
+  "keywords": [
+    "pagination",
+    "paginate",
+    "algorithm",
+    "typescript",
+    "ellipsis"
+  ],
+  "author": "Ivan Akimov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/numnumdevnull/pagination-algorithm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/numnumdevnull/pagination-algorithm/issues"
+  },
+  "homepage": "https://github.com/numnumdevnull/pagination-algorithm#readme",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.cjs",
+    "dist/index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && tsc --module commonjs --outDir dist/cjs --declaration false && move dist\\cjs\\index.js dist\\index.cjs && rmdir /s /q dist\\cjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.3"
+  }
+}
